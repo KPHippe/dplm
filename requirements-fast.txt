@@ -1,0 +1,6 @@
+# Adapter-only overlay. Torch/numpy/pytest are reused read-only from FAST's pinned runtime.
+transformers==4.39.2
+huggingface-hub==0.30.2
+safetensors==0.5.3
+tokenizers==0.15.2
+regex==2024.11.6

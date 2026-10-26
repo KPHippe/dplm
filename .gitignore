@@ -159,6 +159,12 @@ run/logs
 
 byprot-checkpoints/
 generation-results/
+/outputs
+/.codex/
+/.ruff_cache/
+# Local paper copies are retained in the migration handoff, outside Git.
+/2410.13782v1.pdf
+/2504.11454v3.pdf
 data-bin/scaffolding-pdbs/*.pdb
 temp.ipynb
 # run/
