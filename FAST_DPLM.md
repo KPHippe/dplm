@@ -1,5 +1,20 @@
 # FAST–DPLM adapter
 
+## Branch workflow
+
+This fork uses `main` for stable snapshots and `dev` for integration. New feature
+and fix branches start from `dev` and return through pull requests; periodically
+promote a tested dev snapshot to main, preserving history, then synchronize dev
+with the updated main. Initially main remains the released Bytedance baseline
+while dev contains the FAST integration. `origin` is KPHippe/dplm; `upstream` is
+bytedance/dplm. Review upstream changes on a separate branch before integration.
+Use the matching FAST `dev` checkout and record both exact commit IDs for runs.
+
+`migration-20261026` preserves the original integration commit e519b36. Portable
+Git bundles and branch-cleanup receipts are under the project-storage directory
+`/hpc/projects/group.chi/aiml/data/FAST/outputs/branch_cleanup_20261027_v1/`.
+The earlier migration handoff and all frozen experiment bundles remain unchanged.
+
 **Current state (2026-10-26):** matched FAST8k and recovered native8k generator
 runs have both completed 100k updates. The active implementation is
 `scripts/train_fast_recovery.py` / `scripts/train_native_recovery.py`, using the
